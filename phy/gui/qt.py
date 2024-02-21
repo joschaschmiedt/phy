@@ -30,34 +30,38 @@ logger = logging.getLogger(__name__)
 # https://riverbankcomputing.com/pipermail/pyqt/2014-January/033681.html
 from OpenGL import GL  # noqa
 
-from PyQt5.QtCore import (Qt, QByteArray, QMetaObject, QObject,  # noqa
-                          QVariant, QEventLoop, QTimer, QPoint, QTimer,
-                          QThreadPool, QRunnable,
-                          pyqtSignal, pyqtSlot, QSize, QUrl,
-                          QEvent, QCoreApplication,
-                          qInstallMessageHandler,
-                          )
-from PyQt5.QtGui import (  # noqa
+from PySide6.QtCore import (Qt, QByteArray, QMetaObject, QObject,  # noqa
+                            QEventLoop, QTimer, QPoint, QTimer,
+                            QThreadPool, QRunnable,
+                            Signal, Slot, QSize, QUrl,
+                            QEvent, QCoreApplication,
+                            qInstallMessageHandler,
+)
+from PySide6.QtGui import (  # noqa
     QKeySequence, QIcon, QColor, QMouseEvent, QGuiApplication,
-    QFontDatabase, QWindow, QOpenGLWindow)
-from PyQt5.QtWebEngineWidgets import (QWebEngineView,  # noqa
-                                      QWebEnginePage,
-                                      # QWebSettings,
-                                      )
-from PyQt5.QtWebChannel import QWebChannel  # noqa
-from PyQt5.QtWidgets import (# noqa
-    QAction, QStatusBar, QMainWindow, QDockWidget, QToolBar,
+    QFontDatabase, QWindow
+    )
+from PySide6.QtOpenGL import QOpenGLWindow
+from PySide6.QtWebEngineWidgets import (QWebEngineView)
+from PySide6.QtWebEngineCore import QWebEnginePage
+from PySide6.QtWebChannel import QWebChannel  # noqa
+from PySide6.QtGui import QAction
+from PySide6.QtWidgets import (  # noqa
+    QStatusBar, QMainWindow, QDockWidget, QToolBar,
     QWidget, QHBoxLayout, QVBoxLayout, QGridLayout, QScrollArea,
     QPushButton, QLabel, QCheckBox, QPlainTextEdit,
     QLineEdit, QSlider, QSpinBox, QDoubleSpinBox,
     QMessageBox, QApplication, QMenu, QMenuBar,
-    QInputDialog, QOpenGLWidget)
+    QInputDialog)
+from PySide6.QtOpenGLWidgets import QOpenGLWidget
 
 # Enable high DPI support.
 # BUG: uncommenting this create scaling bugs on high DPI screens
 # on Ubuntu.
 #QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
 
+pyqtSignal = Signal
+pyqtSlot = Slot
 
 # -----------------------------------------------------------------------------
 # Testing functions: mock dialogs in automated tests
