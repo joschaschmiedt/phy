@@ -1,4 +1,20 @@
 [project]
+dependencies = [
+    "click>=8.1.7",
+    "colorcet>=3.1.0",
+    "cython>=3.0.11",
+    "dask>=2023.5.0",
+    "h5py>=3.11.0",
+    "matplotlib>=3.7.5",
+    "numpy<2.0",
+    "phylib>=2.6.0",
+    "pyopengl==3.1.6",
+    "pyqt5==5.12.3",
+    "pyqtwebengine==5.12.*",
+    "qtconsole>=5.6.1",
+    "requests>=2.32.3",
+    "scipy>=1.10.1",
+]
 name = "phy"
 version = "2.0.0-beta6"
 description = "nteractive visualization and manual spike sorting of large-scale ephys data"
@@ -10,24 +26,6 @@ maintainers = [
     { name = "Cyrille Rossant", email = "cyrille.rossant@gmail.com" },
 ]
 keywords = ['phy', 'data analysis', 'electrophysiology', 'neuroscience']
-dependencies = [
-    "click>=8.1.7",
-    "colorcet>=3.1.0",
-    "cython>=3.0.11",
-    "dask>=2023.5.0",
-    "h5py>=3.11.0",
-    "matplotlib>=3.7.5",
-    "numpy<2.0",
-    "phylib>=2.6.0",
-    "pyopengl==3.1.6",
-    "pyqt5-qt5==5.15.15 ; platform_system != 'Windows'",
-    "pyqt5-qt5==5.15.2 ; platform_system == 'Windows'",
-    "pyqtwebengine==5.15.2; platform_system == 'Windows'",
-    "qtconsole>=5.6.1",
-    "pyqtwebengine==5.15.2; platform_system != 'Windows'",
-    "requests>=2.32.3",
-    "scipy>=1.10.1",
-]
 classifiers = [
     'Development Status :: 4 - Beta',
     'Intended Audience :: Developers',
@@ -57,3 +55,7 @@ dev = [
 ]
 [project.scripts]
 phy = "phy:apps.phycli"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

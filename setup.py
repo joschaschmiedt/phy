@@ -64,11 +64,11 @@ setup(
         'phy': ['*.vert', '*.frag', '*.glsl', '*.npy', '*.gz', '*.txt', '*.json',
                 '*.html', '*.css', '*.js', '*.prb', '*.ttf', '*.png'],
     },
-    # entry_points={
-        # 'console_scripts': [
-            # 'phy = phy.apps:phycli'
-        # ],
-    # },
+    entry_points={
+        'console_scripts': [
+            'phy = phy.apps:phycli'
+        ],
+    },
     # install_requires=require,
     include_package_data=True,
     # keywords='phy,data analysis,electrophysiology,neuroscience',
