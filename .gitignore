@@ -53,3 +53,7 @@ msdfgen
 *.sh
 tools/*.png
 tools/*.ttf
+
+
+.venv
+.conda
