@@ -1,0 +1,59 @@
+[project]
+name = "phy"
+version = "2.0.0-beta6"
+description = "nteractive visualization and manual spike sorting of large-scale ephys data"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "BSD License" }
+authors = [{ name = "Cyrille Rossant", email = "cyrille.rossant@gmail.com" }]
+maintainers = [
+    { name = "Cyrille Rossant", email = "cyrille.rossant@gmail.com" },
+]
+keywords = ['phy', 'data analysis', 'electrophysiology', 'neuroscience']
+dependencies = [
+    "click>=8.1.7",
+    "colorcet>=3.1.0",
+    "cython>=3.0.11",
+    "dask>=2023.5.0",
+    "h5py>=3.11.0",
+    "matplotlib>=3.7.5",
+    "numpy<2.0",
+    "phylib>=2.6.0",
+    "pyopengl==3.1.6",
+    "pyqt5-qt5==5.15.15 ; platform_system != 'Windows'",
+    "pyqt5-qt5==5.15.2 ; platform_system == 'Windows'",
+    "pyqtwebengine==5.15.2; platform_system == 'Windows'",
+    "qtconsole>=5.6.1",
+    "pyqtwebengine==5.15.2; platform_system != 'Windows'",
+    "requests>=2.32.3",
+    "scipy>=1.10.1",
+]
+classifiers = [
+    'Development Status :: 4 - Beta',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: BSD License',
+    'Natural Language :: English',
+    "Framework :: IPython",
+    'Programming Language :: Python :: 3',
+    'Programming Language :: Python :: 3.8',
+]
+
+[project.urls]
+Homepage = "https://github.com/cortex-lab/phy/"
+Documentation = "https://phy.readthedocs.io/en/latest/"
+Repository = "https://github.com/cortex-lab/phy.git"
+"Bug Tracker" = "https://github.com/cortex-lab/phy/issues"
+Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+
+[dependency-groups]
+dev = [
+    "pytest-qt>=4.4.0",
+    "pytest>=8.3.4",
+    "coverage>=7.6.1",
+    "flake8>=5.0.4",
+    "pytest-cov>=5.0.0",
+    "memory-profiler>=0.61.0",
+    "coveralls>=4.0.1",
+]
+[project.scripts]
+phy = "phy:apps.phycli"

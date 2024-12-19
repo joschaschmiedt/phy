@@ -51,8 +51,7 @@ except ImportError:
 
 setup(
     name='phy',
-    version=version,
-    license="BSD",
+    version=version,    
     description='Interactive visualization and manual spike sorting of large-scale ephys data',
     long_description=readme,
     long_description_content_type="text/markdown",
@@ -65,21 +64,21 @@ setup(
         'phy': ['*.vert', '*.frag', '*.glsl', '*.npy', '*.gz', '*.txt', '*.json',
                 '*.html', '*.css', '*.js', '*.prb', '*.ttf', '*.png'],
     },
-    entry_points={
-        'console_scripts': [
-            'phy = phy.apps:phycli'
-        ],
-    },
-    install_requires=require,
+    # entry_points={
+        # 'console_scripts': [
+            # 'phy = phy.apps:phycli'
+        # ],
+    # },
+    # install_requires=require,
     include_package_data=True,
-    keywords='phy,data analysis,electrophysiology,neuroscience',
-    classifiers=[
-        'Development Status :: 4 - Beta',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
-        'Natural Language :: English',
-        "Framework :: IPython",
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7',
-    ],
+    # keywords='phy,data analysis,electrophysiology,neuroscience',
+    # classifiers=[
+    #     'Development Status :: 4 - Beta',
+    #     'Intended Audience :: Developers',
+    #     'License :: OSI Approved :: BSD License',
+    #     'Natural Language :: English',
+    #     "Framework :: IPython",
+    #     'Programming Language :: Python :: 3',
+    #     'Programming Language :: Python :: 3.7',
+    # ],
 )
